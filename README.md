@@ -1,2 +1,2 @@
-# Dimensional_modelling_dbt
+# Dimensional modelling
 dimensional modelling (star schema) using dbt
