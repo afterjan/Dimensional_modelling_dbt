@@ -1,0 +1,98 @@
+version: 2
+
+models:
+  - name: fact_taxi_trips
+    description: "fact table"
+    columns:
+      - name: trip_id
+        description: "Fact table primary key"
+        tests:
+          - not_null
+          - unique
+      - name: taxi_id
+        description: "Taxi identifier"
+        tests:
+          - relationships:
+              to: ref('dim_taxi_company')
+              field: taxi_id        
+      - name: year
+      - name: month
+      - name: trip_minutes
+        description: "taxi ride in minutes"
+        tests:
+          - not_null
+      - name: trip_miles
+        description: "The distance traveled in miles"
+        tests:
+          - not_null
+      - name: pickup_census_tract
+        tests:
+          - relationships:
+              to: ref('dim_pickup')
+              field: pickup_census_tract
+      - name: dropoff_census_tract
+        tests:
+          - relationships:
+              to: ref('dim_dropoff')
+              field: dropoff_census_tract
+      - name: payment_id
+        description: "The name of the payment_type column, which contains id 1-10"
+        tests:
+          - relationships:
+              to: ref('dim_payment')
+              field: payment_id
+      - name: fare
+        description: "The time-and-distance fare calculated by the meter"
+      - name: tips
+        description: "This field is automatically populated for credit card tips"
+      - name: extras
+        description: "$0.30 improvement surcharge assessed trips at the flag drop. The improvement surcharge began being levied in 2015."
+      - name: trip_total
+        description: "Total amount charged to passengers, not include cash tips"
+
+  - name: dim_dropoff
+    description: "drop off"
+    columns:
+    - name: dropoff_census_tract
+      tests:
+        - unique
+        - not_null
+    columns:
+    - name: dropoff_community_area
+      tests:
+        - not_null
+
+  - name: dim_pickup
+    description: "pick up"
+    columns:
+    - name: pickup_census_tract
+      tests:
+        - unique
+        - not_null
+    - name: pickup_community_area
+      test:
+       - not_null
+  
+  - name: dim_payment
+    description: "payment type"
+    columns:
+    - name: payment_id
+      test:
+        - unique
+        - not_null
+    - name: payment_type
+      test:
+       - not_null
+       - accepted_values:
+            values: ["Cash", "Credit Card", "Dispute", "Mobile", "No charge", "Pcard", "Prcard", "Prepaid", "Unknown", "Way2ride"]
+  
+  - name: dim_taxi_company
+    descriptions: 'Information about taxi companies'
+    columns:
+    - name: taxi_id
+      test:
+        - unique
+        - not_null
+    - name: company
+      test:
+        - not_null

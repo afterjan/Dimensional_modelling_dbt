@@ -1,0 +1,1125 @@
+
+
+============================== 2023-03-15 02:27:53.952398 | 44b46998-e726-40d5-9e2b-1278eea29e9f ==============================
+[0m02:27:53.952398 [info ] [MainThread]: Running with dbt=1.4.4
+[0m02:27:53.955613 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/user/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m02:27:53.955975 [debug] [MainThread]: Tracking: tracking
+[0m02:27:53.999640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111714ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111714e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111714dc0>]}
+[0m02:27:54.019503 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m02:27:54.020480 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m02:27:54.020922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '44b46998-e726-40d5-9e2b-1278eea29e9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111727370>]}
+[0m02:27:54.047355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111727430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11175d730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11175d790>]}
+[0m02:27:54.047816 [debug] [MainThread]: Flushing usage events
+[0m02:27:55.508073 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading dbt_with_bq: data warehouse/schema.yml - Runtime Error
+    Syntax error near line 47
+    ------------------------------
+    44 |       - name: fare
+    45 |         description: "The time-and-distance fare calculated by the meter"
+    46 |       - name: tips
+    47 |         description: ""This field is automatically populated for credit card tips""
+    48 |       - name: extras
+    49 |         description: "$0.30 improvement surcharge assessed trips at the flag drop. The improvement surcharge began being levied in 2015."
+    50 |       - name: trip_total
+    
+    Raw Error:
+    ------------------------------
+    while parsing a block mapping
+      in "<unicode string>", line 46, column 9:
+              - name: tips
+                ^
+    expected <block end>, but found '<scalar>'
+      in "<unicode string>", line 47, column 24:
+                description: ""This field is automatically popu ... 
+                               ^
+
+
+============================== 2023-03-15 02:29:50.124363 | 9f0a33a4-a8ab-4655-aba5-647eb57f755c ==============================
+[0m02:29:50.124363 [info ] [MainThread]: Running with dbt=1.4.4
+[0m02:29:50.128164 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/user/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m02:29:50.128646 [debug] [MainThread]: Tracking: tracking
+[0m02:29:50.171428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e4e5a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e4e5e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e4e5d90>]}
+[0m02:29:50.193052 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m02:29:50.193750 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m02:29:50.194130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9f0a33a4-a8ab-4655-aba5-647eb57f755c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e4f6400>]}
+[0m02:29:50.944986 [debug] [MainThread]: 1699: static parser successfully parsed staging/taxi_trips.sql
+[0m02:29:50.960718 [debug] [MainThread]: 1699: static parser successfully parsed example/my_first_dbt_model.sql
+[0m02:29:50.964095 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m02:29:50.966959 [debug] [MainThread]: 1603: static parser failed on data warehouse/dim_payment.sql
+[0m02:29:50.972622 [debug] [MainThread]: 1602: parser fallback to jinja rendering on data warehouse/dim_payment.sql
+[0m02:29:50.974241 [debug] [MainThread]: 1699: static parser successfully parsed data warehouse/dim_taxi_company.sql
+[0m02:29:50.977779 [debug] [MainThread]: 1699: static parser successfully parsed data warehouse/dim_dropoff.sql
+[0m02:29:50.980553 [debug] [MainThread]: 1699: static parser successfully parsed data warehouse/dim_pickup.sql
+[0m02:29:50.983465 [debug] [MainThread]: 1603: static parser failed on data warehouse/fact_taxi_trips.sql
+[0m02:29:50.988417 [debug] [MainThread]: 1602: parser fallback to jinja rendering on data warehouse/fact_taxi_trips.sql
+[0m02:29:51.050426 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'dim_tax_company' in the 'models' section of file 'models/data warehouse/schema.yml'
+[0m02:29:51.056182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e6dc580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e6a4070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e6a4400>]}
+[0m02:29:51.056631 [debug] [MainThread]: Flushing usage events
+[0m02:29:52.566679 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Invalid test config given in models/data warehouse/schema.yml:
+  	test definition dictionary must have exactly one key, got [('relationships', None), ('to', "ref('dim_taxi_company')"), ('field', 'taxi_id')] instead (3 keys)
+  	@: UnparsedNodeUpdate(original_file_path='model...ne)
+
+
+============================== 2023-03-15 02:30:30.541026 | ef8d9a4d-4671-4390-af30-d04702784771 ==============================
+[0m02:30:30.541026 [info ] [MainThread]: Running with dbt=1.4.4
+[0m02:30:30.543255 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/user/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m02:30:30.543595 [debug] [MainThread]: Tracking: tracking
+[0m02:30:30.557440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c162100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c162e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1629d0>]}
+[0m02:30:30.572279 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m02:30:30.572943 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m02:30:30.573366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ef8d9a4d-4671-4390-af30-d04702784771', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c14e9d0>]}
+[0m02:30:31.284942 [debug] [MainThread]: 1699: static parser successfully parsed staging/taxi_trips.sql
+[0m02:30:31.297241 [debug] [MainThread]: 1699: static parser successfully parsed example/my_first_dbt_model.sql
+[0m02:30:31.300352 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m02:30:31.303225 [debug] [MainThread]: 1603: static parser failed on data warehouse/dim_payment.sql
+[0m02:30:31.308849 [debug] [MainThread]: 1602: parser fallback to jinja rendering on data warehouse/dim_payment.sql
+[0m02:30:31.310414 [debug] [MainThread]: 1699: static parser successfully parsed data warehouse/dim_taxi_company.sql
+[0m02:30:31.313997 [debug] [MainThread]: 1699: static parser successfully parsed data warehouse/dim_dropoff.sql
+[0m02:30:31.316822 [debug] [MainThread]: 1699: static parser successfully parsed data warehouse/dim_pickup.sql
+[0m02:30:31.319632 [debug] [MainThread]: 1603: static parser failed on data warehouse/fact_taxi_trips.sql
+[0m02:30:31.324475 [debug] [MainThread]: 1602: parser fallback to jinja rendering on data warehouse/fact_taxi_trips.sql
+[0m02:30:31.394050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c34b190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c3030a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c312be0>]}
+[0m02:30:31.394544 [debug] [MainThread]: Flushing usage events
+[0m02:30:32.501799 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Invalid test config given in models/data warehouse/schema.yml:
+  	test definition dictionary must have exactly one key, got [('relationships', None), ('to', "ref('dim_taxi_company')"), ('field', 'taxi_id')] instead (3 keys)
+  	@: UnparsedNodeUpdate(original_file_path='model...ne)
+
+
+============================== 2023-03-15 02:32:34.101372 | 6c128407-8500-4f3a-b849-bcf7d004d3db ==============================
+[0m02:32:34.101372 [info ] [MainThread]: Running with dbt=1.4.4
+[0m02:32:34.106866 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/user/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m02:32:34.107455 [debug] [MainThread]: Tracking: tracking
+[0m02:32:34.160663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a8d8bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a8d8f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a8d8eb0>]}
+[0m02:32:34.188944 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m02:32:34.189628 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m02:32:34.190354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a8ebb20>]}
+[0m02:32:34.942608 [debug] [MainThread]: 1699: static parser successfully parsed staging/taxi_trips.sql
+[0m02:32:34.968816 [debug] [MainThread]: 1699: static parser successfully parsed example/my_first_dbt_model.sql
+[0m02:32:34.974242 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m02:32:34.979012 [debug] [MainThread]: 1603: static parser failed on data warehouse/dim_payment.sql
+[0m02:32:34.988472 [debug] [MainThread]: 1602: parser fallback to jinja rendering on data warehouse/dim_payment.sql
+[0m02:32:34.991096 [debug] [MainThread]: 1699: static parser successfully parsed data warehouse/dim_taxi_company.sql
+[0m02:32:34.997027 [debug] [MainThread]: 1699: static parser successfully parsed data warehouse/dim_dropoff.sql
+[0m02:32:35.001918 [debug] [MainThread]: 1699: static parser successfully parsed data warehouse/dim_pickup.sql
+[0m02:32:35.006687 [debug] [MainThread]: 1603: static parser failed on data warehouse/fact_taxi_trips.sql
+[0m02:32:35.013917 [debug] [MainThread]: 1602: parser fallback to jinja rendering on data warehouse/fact_taxi_trips.sql
+[0m02:32:35.156668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ab41fa0>]}
+[0m02:32:35.167972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a8eb9a0>]}
+[0m02:32:35.168493 [info ] [MainThread]: Found 8 models, 15 tests, 0 snapshots, 0 analyses, 335 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m02:32:35.168888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aaaa9d0>]}
+[0m02:32:35.170958 [info ] [MainThread]: 
+[0m02:32:35.172887 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:32:35.174709 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_datafellowship9'
+[0m02:32:35.175120 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:32:53.339771 [debug] [ThreadPool]: Acquiring new bigquery connection 'create_datafellowship9_dbt_taxi_trips'
+[0m02:32:53.342240 [debug] [ThreadPool]: Acquiring new bigquery connection 'create_datafellowship9_dbt_taxi_trips'
+[0m02:32:53.343267 [debug] [ThreadPool]: Creating schema "ReferenceKeyMsg(database='datafellowship9', schema='dbt_taxi_trips', identifier=None)"
+[0m02:32:53.365129 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:32:53.366278 [debug] [ThreadPool]: On create_datafellowship9_dbt_taxi_trips: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "dbt_with_bq", "target_name": "dev", "connection_name": "create_datafellowship9_dbt_taxi_trips"} */
+create schema if not exists `datafellowship9`.`dbt_taxi_trips`
+  
+[0m02:32:54.960653 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datafellowship9&j=bq:US:ff2f7872-6f99-44dc-bdfd-325c9a27c937&page=queryresults
+[0m02:32:54.966460 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_datafellowship9_dbt_taxi_trips'
+[0m02:32:54.967391 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:32:55.545083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aaa1dc0>]}
+[0m02:32:55.547287 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m02:32:55.548278 [info ] [MainThread]: 
+[0m02:32:55.560827 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.my_first_dbt_model
+[0m02:32:55.561729 [info ] [Thread-1  ]: 1 of 7 START sql table model dbt_taxi_trips.my_first_dbt_model ................. [RUN]
+[0m02:32:55.563068 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.my_first_dbt_model'
+[0m02:32:55.563576 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.my_first_dbt_model
+[0m02:32:55.571874 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.my_first_dbt_model"
+[0m02:32:55.573873 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.my_first_dbt_model (compile): 2023-03-15 02:32:55.563989 => 2023-03-15 02:32:55.573631
+[0m02:32:55.574655 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.my_first_dbt_model
+[0m02:32:55.636867 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_with_bq.my_first_dbt_model"
+[0m02:32:55.637935 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m02:32:55.638332 [debug] [Thread-1  ]: On model.dbt_with_bq.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "dbt_with_bq", "target_name": "dev", "node_id": "model.dbt_with_bq.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `datafellowship9`.`dbt_taxi_trips`.`my_first_dbt_model`
+    
+    
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m02:32:59.373661 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datafellowship9&j=bq:US:5e5d6bf1-724f-4b72-a95c-d44d71c19bac&page=queryresults
+[0m02:32:59.404374 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.my_first_dbt_model (execute): 2023-03-15 02:32:55.575100 => 2023-03-15 02:32:59.404272
+[0m02:32:59.405632 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ac71760>]}
+[0m02:32:59.406418 [info ] [Thread-1  ]: 1 of 7 OK created sql table model dbt_taxi_trips.my_first_dbt_model ............ [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 3.84s]
+[0m02:32:59.409287 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.my_first_dbt_model
+[0m02:32:59.410055 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.taxi_trips
+[0m02:32:59.411197 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.taxi_trips'
+[0m02:32:59.411816 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.taxi_trips
+[0m02:32:59.418028 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.taxi_trips"
+[0m02:32:59.419306 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.taxi_trips (compile): 2023-03-15 02:32:59.412163 => 2023-03-15 02:32:59.419167
+[0m02:32:59.420671 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.taxi_trips
+[0m02:32:59.426080 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.dim_dropoff
+[0m02:32:59.427025 [info ] [Thread-1  ]: 2 of 7 START sql table model dbt_taxi_trips.dim_dropoff ........................ [RUN]
+[0m02:32:59.428417 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.dim_dropoff'
+[0m02:32:59.429401 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.dim_dropoff
+[0m02:32:59.440761 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.dim_dropoff"
+[0m02:32:59.441992 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_dropoff (compile): 2023-03-15 02:32:59.429863 => 2023-03-15 02:32:59.441850
+[0m02:32:59.442588 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.dim_dropoff
+[0m02:32:59.453793 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_with_bq.dim_dropoff"
+[0m02:32:59.454956 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m02:32:59.455775 [debug] [Thread-1  ]: On model.dbt_with_bq.dim_dropoff: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "dbt_with_bq", "target_name": "dev", "node_id": "model.dbt_with_bq.dim_dropoff"} */
+
+  
+    
+
+    create or replace table `datafellowship9`.`dbt_taxi_trips`.`dim_dropoff`
+    
+    
+    OPTIONS()
+    as (
+      
+
+with __dbt__cte__taxi_trips as (
+
+
+SELECT *
+FROM `bigquery-public-data`.`chicago_taxi_trips`.`taxi_trips`
+WHERE EXTRACT(YEAR from trip_start_timestamp) IN (2020,2021,2022)
+)SELECT DISTINCT dropoff_census_tract,
+  dropoff_community_area,
+  dropoff_latitude,
+  dropoff_longitude
+FROM __dbt__cte__taxi_trips
+WHERE pickup_census_tract IS NOT NULL
+ORDER BY 1
+    );
+  
+[0m02:33:03.569070 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datafellowship9&j=bq:US:33f0b631-2798-424a-8788-98a1a709f7d2&page=queryresults
+[0m02:33:03.572439 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_dropoff (execute): 2023-03-15 02:32:59.442932 => 2023-03-15 02:33:03.572311
+[0m02:33:03.574069 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10acbe550>]}
+[0m02:33:03.575183 [info ] [Thread-1  ]: 2 of 7 OK created sql table model dbt_taxi_trips.dim_dropoff ................... [[32mCREATE TABLE (747.0 rows, 2.0 GB processed)[0m in 4.15s]
+[0m02:33:03.576243 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.dim_dropoff
+[0m02:33:03.577409 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.dim_payment
+[0m02:33:03.578479 [info ] [Thread-1  ]: 3 of 7 START sql table model dbt_taxi_trips.dim_payment ........................ [RUN]
+[0m02:33:03.580010 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.dim_payment'
+[0m02:33:03.580696 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.dim_payment
+[0m02:33:03.604924 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.dim_payment"
+[0m02:33:03.606150 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_payment (compile): 2023-03-15 02:33:03.581160 => 2023-03-15 02:33:03.606007
+[0m02:33:03.606866 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.dim_payment
+[0m02:33:03.613617 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_with_bq.dim_payment"
+[0m02:33:03.614785 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m02:33:03.615389 [debug] [Thread-1  ]: On model.dbt_with_bq.dim_payment: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "dbt_with_bq", "target_name": "dev", "node_id": "model.dbt_with_bq.dim_payment"} */
+
+  
+    
+
+    create or replace table `datafellowship9`.`dbt_taxi_trips`.`dim_payment`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH  __dbt__cte__taxi_trips as (
+
+
+SELECT *
+FROM `bigquery-public-data`.`chicago_taxi_trips`.`taxi_trips`
+WHERE EXTRACT(YEAR from trip_start_timestamp) IN (2020,2021,2022)
+),t1 AS(
+    SELECT 
+        DISTINCT payment_type
+    FROM __dbt__cte__taxi_trips
+)
+
+SELECT 
+    case payment_type
+        when "Cash" then '1'
+        when "Credit Card" then  '2'
+        when "Dispute" then  '3'
+        when "Mobile" then '4'
+        when "No charge" then '5'
+        when "Pcard" then '6'
+        when "Prcard" then '7' 
+        when "Prepaid" then '8'
+        when "Unknown" then '9'
+        when "Way2ride" then '10'
+    end as payment_id,
+    payment_type
+FROM 
+    t1
+WHERE
+    payment_type IS NOT NULL
+ORDER BY
+    1
+    );
+  
+[0m02:33:07.588164 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datafellowship9&j=bq:US:db8683ce-831e-4ad8-9e8f-1c583ee6b01a&page=queryresults
+[0m02:33:07.591580 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_payment (execute): 2023-03-15 02:33:03.607303 => 2023-03-15 02:33:07.591446
+[0m02:33:07.593243 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ace5bb0>]}
+[0m02:33:07.594269 [info ] [Thread-1  ]: 3 of 7 OK created sql table model dbt_taxi_trips.dim_payment ................... [[32mCREATE TABLE (8.0 rows, 960.4 MB processed)[0m in 4.01s]
+[0m02:33:07.595174 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.dim_payment
+[0m02:33:07.596272 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.dim_pickup
+[0m02:33:07.597280 [info ] [Thread-1  ]: 4 of 7 START sql table model dbt_taxi_trips.dim_pickup ......................... [RUN]
+[0m02:33:07.598786 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.dim_pickup'
+[0m02:33:07.599403 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.dim_pickup
+[0m02:33:07.610666 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.dim_pickup"
+[0m02:33:07.611787 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_pickup (compile): 2023-03-15 02:33:07.599808 => 2023-03-15 02:33:07.611655
+[0m02:33:07.612388 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.dim_pickup
+[0m02:33:07.617575 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_with_bq.dim_pickup"
+[0m02:33:07.629703 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m02:33:07.630421 [debug] [Thread-1  ]: On model.dbt_with_bq.dim_pickup: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "dbt_with_bq", "target_name": "dev", "node_id": "model.dbt_with_bq.dim_pickup"} */
+
+  
+    
+
+    create or replace table `datafellowship9`.`dbt_taxi_trips`.`dim_pickup`
+    
+    
+    OPTIONS()
+    as (
+      
+
+with __dbt__cte__taxi_trips as (
+
+
+SELECT *
+FROM `bigquery-public-data`.`chicago_taxi_trips`.`taxi_trips`
+WHERE EXTRACT(YEAR from trip_start_timestamp) IN (2020,2021,2022)
+)SELECT DISTINCT pickup_census_tract,
+  pickup_community_area,
+  pickup_latitude,
+  pickup_longitude
+FROM __dbt__cte__taxi_trips
+WHERE pickup_census_tract IS NOT NULL
+ORDER BY 1
+    );
+  
+[0m02:33:11.389590 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datafellowship9&j=bq:US:b16e09b0-1295-45f9-840c-2617f552dce5&page=queryresults
+[0m02:33:11.393209 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_pickup (execute): 2023-03-15 02:33:07.612868 => 2023-03-15 02:33:11.393080
+[0m02:33:11.394845 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ace5cd0>]}
+[0m02:33:11.395936 [info ] [Thread-1  ]: 4 of 7 OK created sql table model dbt_taxi_trips.dim_pickup .................... [[32mCREATE TABLE (625.0 rows, 1.7 GB processed)[0m in 3.80s]
+[0m02:33:11.397112 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.dim_pickup
+[0m02:33:11.398138 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.dim_taxi_company
+[0m02:33:11.399149 [info ] [Thread-1  ]: 5 of 7 START sql table model dbt_taxi_trips.dim_taxi_company ................... [RUN]
+[0m02:33:11.400798 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.dim_taxi_company'
+[0m02:33:11.401601 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.dim_taxi_company
+[0m02:33:11.421793 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.dim_taxi_company"
+[0m02:33:11.422911 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_taxi_company (compile): 2023-03-15 02:33:11.402130 => 2023-03-15 02:33:11.422778
+[0m02:33:11.423533 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.dim_taxi_company
+[0m02:33:11.429680 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_with_bq.dim_taxi_company"
+[0m02:33:11.431115 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m02:33:11.431825 [debug] [Thread-1  ]: On model.dbt_with_bq.dim_taxi_company: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "dbt_with_bq", "target_name": "dev", "node_id": "model.dbt_with_bq.dim_taxi_company"} */
+
+  
+    
+
+    create or replace table `datafellowship9`.`dbt_taxi_trips`.`dim_taxi_company`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH
+   __dbt__cte__taxi_trips as (
+
+
+SELECT *
+FROM `bigquery-public-data`.`chicago_taxi_trips`.`taxi_trips`
+WHERE EXTRACT(YEAR from trip_start_timestamp) IN (2020,2021,2022)
+),t1 AS (
+  SELECT
+    DISTINCT taxi_id,
+    company,
+    fare/trip_miles AS fare_per_miles
+  FROM
+    __dbt__cte__taxi_trips
+  WHERE
+    taxi_id IS NOT NULL
+    AND NOT trip_miles = 0
+    AND NOT fare = 0
+  ORDER BY
+    1)
+SELECT
+  taxi_id,
+  company,
+  AVG(fare_per_miles) AS avg_fare_per_miles
+FROM
+  t1
+GROUP BY 1,2
+ORDER BY 1,2
+    );
+  
+[0m02:33:20.729931 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datafellowship9&j=bq:US:3ec518de-18ae-4ee4-91c4-b7d8eddec4e4&page=queryresults
+[0m02:33:20.733221 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_taxi_company (execute): 2023-03-15 02:33:11.423931 => 2023-03-15 02:33:20.733092
+[0m02:33:20.734859 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad2b820>]}
+[0m02:33:20.735935 [info ] [Thread-1  ]: 5 of 7 OK created sql table model dbt_taxi_trips.dim_taxi_company .............. [[32mCREATE TABLE (5.3k rows, 10.0 GB processed)[0m in 9.33s]
+[0m02:33:20.736976 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.dim_taxi_company
+[0m02:33:20.738220 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.fact_taxi_trips
+[0m02:33:20.739321 [info ] [Thread-1  ]: 6 of 7 START sql table model dbt_taxi_trips.fact_taxi_trips .................... [RUN]
+[0m02:33:20.744438 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.fact_taxi_trips'
+[0m02:33:20.745138 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.fact_taxi_trips
+[0m02:33:20.793348 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.fact_taxi_trips"
+[0m02:33:20.794958 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.fact_taxi_trips (compile): 2023-03-15 02:33:20.745538 => 2023-03-15 02:33:20.794823
+[0m02:33:20.795488 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.fact_taxi_trips
+[0m02:33:20.799480 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_with_bq.fact_taxi_trips"
+[0m02:33:20.800355 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m02:33:20.800851 [debug] [Thread-1  ]: On model.dbt_with_bq.fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "dbt_with_bq", "target_name": "dev", "node_id": "model.dbt_with_bq.fact_taxi_trips"} */
+
+  
+    
+
+    create or replace table `datafellowship9`.`dbt_taxi_trips`.`fact_taxi_trips`
+    
+    
+    OPTIONS()
+    as (
+      
+
+with __dbt__cte__taxi_trips as (
+
+
+SELECT *
+FROM `bigquery-public-data`.`chicago_taxi_trips`.`taxi_trips`
+WHERE EXTRACT(YEAR from trip_start_timestamp) IN (2020,2021,2022)
+)SELECT
+  unique_key AS trip_id,
+  taxi_id,
+  EXTRACT(year FROM trip_start_timestamp) AS year,
+  EXTRACT(month FROM trip_start_timestamp) AS month,
+  trip_seconds/60 AS trip_minutes,
+  trip_miles,
+  pickup_census_tract,
+  dropoff_census_tract,
+  case payment_type
+        when "Cash" then '1'
+        when "Credit Card" then  '2'
+        when "Dispute" then  '3'
+        when "Mobile" then '4'
+        when "No charge" then '5'
+        when "Pcard" then '6'
+        when "Prcard" then '7' 
+        when "Prepaid" then '8'
+        when "Unknown" then '9'
+        when "Way2ride" then '10'
+    end as payment_id,
+  fare,
+  tips,
+  extras,
+  trip_total
+FROM
+  __dbt__cte__taxi_trips
+WHERE
+  trip_seconds IS NOT NULL
+    );
+  
+[0m02:33:34.176227 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datafellowship9&j=bq:US:0505603a-9155-4b9a-92cb-7a00f49b53f0&page=queryresults
+[0m02:33:34.180774 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.fact_taxi_trips (execute): 2023-03-15 02:33:20.795786 => 2023-03-15 02:33:34.180585
+[0m02:33:34.183189 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad2b520>]}
+[0m02:33:34.184798 [info ] [Thread-1  ]: 6 of 7 OK created sql table model dbt_taxi_trips.fact_taxi_trips ............... [[32mCREATE TABLE (4.8m rows, 13.6 GB processed)[0m in 13.44s]
+[0m02:33:34.186505 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.fact_taxi_trips
+[0m02:33:34.187933 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.my_second_dbt_model
+[0m02:33:34.189670 [info ] [Thread-1  ]: 7 of 7 START sql view model dbt_taxi_trips.my_second_dbt_model ................. [RUN]
+[0m02:33:34.191662 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.my_second_dbt_model'
+[0m02:33:34.192505 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.my_second_dbt_model
+[0m02:33:34.200025 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.my_second_dbt_model"
+[0m02:33:34.201481 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.my_second_dbt_model (compile): 2023-03-15 02:33:34.192995 => 2023-03-15 02:33:34.201287
+[0m02:33:34.202229 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.my_second_dbt_model
+[0m02:33:34.251728 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_with_bq.my_second_dbt_model"
+[0m02:33:34.253100 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m02:33:34.253971 [debug] [Thread-1  ]: On model.dbt_with_bq.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "dbt_with_bq", "target_name": "dev", "node_id": "model.dbt_with_bq.my_second_dbt_model"} */
+
+
+  create or replace view `datafellowship9`.`dbt_taxi_trips`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `datafellowship9`.`dbt_taxi_trips`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m02:33:36.005071 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datafellowship9&j=bq:US:74be9722-6932-4e26-abae-6238d663f820&page=queryresults
+[0m02:33:36.008473 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.my_second_dbt_model (execute): 2023-03-15 02:33:34.202710 => 2023-03-15 02:33:36.008343
+[0m02:33:36.010186 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6c128407-8500-4f3a-b849-bcf7d004d3db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ac71670>]}
+[0m02:33:36.011159 [info ] [Thread-1  ]: 7 of 7 OK created sql view model dbt_taxi_trips.my_second_dbt_model ............ [[32mCREATE VIEW (0 processed)[0m in 1.82s]
+[0m02:33:36.012102 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.my_second_dbt_model
+[0m02:33:36.015232 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:33:36.016756 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:33:36.017355 [debug] [MainThread]: Connection 'model.dbt_with_bq.my_second_dbt_model' was properly closed.
+[0m02:33:36.017971 [info ] [MainThread]: 
+[0m02:33:36.018682 [info ] [MainThread]: Finished running 6 table models, 1 view model in 0 hours 1 minutes and 0.85 seconds (60.85s).
+[0m02:33:36.019875 [debug] [MainThread]: Command end result
+[0m02:33:36.041628 [info ] [MainThread]: 
+[0m02:33:36.042604 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:33:36.043182 [info ] [MainThread]: 
+[0m02:33:36.043749 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m02:33:36.044553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aa61460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad078e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad2b7c0>]}
+[0m02:33:36.045185 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-15 02:41:15.100732 | 097f7175-1b98-4833-913c-7655fe9e4e1f ==============================
+[0m02:41:15.100732 [info ] [MainThread]: Running with dbt=1.4.4
+[0m02:41:15.104224 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/user/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m02:41:15.104677 [debug] [MainThread]: Tracking: tracking
+[0m02:41:15.151699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cdc8100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cdc8e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cdc89a0>]}
+[0m02:41:15.172828 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m02:41:15.276856 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:41:15.277219 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:41:15.286450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '097f7175-1b98-4833-913c-7655fe9e4e1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cf7ff40>]}
+[0m02:41:15.301986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '097f7175-1b98-4833-913c-7655fe9e4e1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ceadc70>]}
+[0m02:41:15.302521 [info ] [MainThread]: Found 8 models, 15 tests, 0 snapshots, 0 analyses, 335 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m02:41:15.303036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '097f7175-1b98-4833-913c-7655fe9e4e1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ceaddf0>]}
+[0m02:41:15.306927 [info ] [MainThread]: 
+[0m02:41:15.316676 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:41:15.318653 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_datafellowship9_dbt_taxi_trips'
+[0m02:41:15.319098 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:41:18.389241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '097f7175-1b98-4833-913c-7655fe9e4e1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cddf130>]}
+[0m02:41:18.391385 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m02:41:18.392247 [info ] [MainThread]: 
+[0m02:41:18.403197 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.my_first_dbt_model
+[0m02:41:18.404616 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.my_first_dbt_model'
+[0m02:41:18.405257 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.my_first_dbt_model
+[0m02:41:18.412679 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.my_first_dbt_model"
+[0m02:41:18.416216 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.my_first_dbt_model (compile): 2023-03-15 02:41:18.405664 => 2023-03-15 02:41:18.415971
+[0m02:41:18.417004 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.my_first_dbt_model
+[0m02:41:18.417710 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.my_first_dbt_model (execute): 2023-03-15 02:41:18.417541 => 2023-03-15 02:41:18.417587
+[0m02:41:18.421162 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.my_first_dbt_model
+[0m02:41:18.422160 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.taxi_trips
+[0m02:41:18.423458 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.taxi_trips'
+[0m02:41:18.424185 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.taxi_trips
+[0m02:41:18.430669 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.taxi_trips"
+[0m02:41:18.433330 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.taxi_trips (compile): 2023-03-15 02:41:18.424605 => 2023-03-15 02:41:18.433177
+[0m02:41:18.434914 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.taxi_trips
+[0m02:41:18.435629 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.my_second_dbt_model
+[0m02:41:18.436786 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.my_second_dbt_model'
+[0m02:41:18.437515 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.my_second_dbt_model
+[0m02:41:18.442394 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.my_second_dbt_model"
+[0m02:41:18.446031 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.my_second_dbt_model (compile): 2023-03-15 02:41:18.437948 => 2023-03-15 02:41:18.445858
+[0m02:41:18.446639 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.my_second_dbt_model
+[0m02:41:18.447541 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.my_second_dbt_model (execute): 2023-03-15 02:41:18.446977 => 2023-03-15 02:41:18.446994
+[0m02:41:18.449071 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.my_second_dbt_model
+[0m02:41:18.449670 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.not_null_my_first_dbt_model_id.5fb22c2710
+[0m02:41:18.450689 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.not_null_my_first_dbt_model_id.5fb22c2710'
+[0m02:41:18.451340 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.not_null_my_first_dbt_model_id.5fb22c2710
+[0m02:41:18.473126 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m02:41:18.474003 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_my_first_dbt_model_id.5fb22c2710 (compile): 2023-03-15 02:41:18.451643 => 2023-03-15 02:41:18.473916
+[0m02:41:18.474330 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.not_null_my_first_dbt_model_id.5fb22c2710
+[0m02:41:18.474564 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_my_first_dbt_model_id.5fb22c2710 (execute): 2023-03-15 02:41:18.474513 => 2023-03-15 02:41:18.474524
+[0m02:41:18.475218 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.not_null_my_first_dbt_model_id.5fb22c2710
+[0m02:41:18.475535 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.unique_my_first_dbt_model_id.16e066b321
+[0m02:41:18.476145 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.unique_my_first_dbt_model_id.16e066b321'
+[0m02:41:18.476516 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.unique_my_first_dbt_model_id.16e066b321
+[0m02:41:18.483356 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.unique_my_first_dbt_model_id.16e066b321"
+[0m02:41:18.484082 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.unique_my_first_dbt_model_id.16e066b321 (compile): 2023-03-15 02:41:18.476717 => 2023-03-15 02:41:18.484005
+[0m02:41:18.484520 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.unique_my_first_dbt_model_id.16e066b321
+[0m02:41:18.484779 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.unique_my_first_dbt_model_id.16e066b321 (execute): 2023-03-15 02:41:18.484722 => 2023-03-15 02:41:18.484732
+[0m02:41:18.485414 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.unique_my_first_dbt_model_id.16e066b321
+[0m02:41:18.485781 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.dim_dropoff
+[0m02:41:18.486352 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.dim_dropoff'
+[0m02:41:18.486610 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.dim_dropoff
+[0m02:41:18.498892 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.dim_dropoff"
+[0m02:41:18.499630 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_dropoff (compile): 2023-03-15 02:41:18.486919 => 2023-03-15 02:41:18.499546
+[0m02:41:18.500062 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.dim_dropoff
+[0m02:41:18.500342 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_dropoff (execute): 2023-03-15 02:41:18.500283 => 2023-03-15 02:41:18.500294
+[0m02:41:18.501035 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.dim_dropoff
+[0m02:41:18.501348 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.dim_payment
+[0m02:41:18.502035 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.dim_payment'
+[0m02:41:18.502310 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.dim_payment
+[0m02:41:18.513110 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.dim_payment"
+[0m02:41:18.513793 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_payment (compile): 2023-03-15 02:41:18.502486 => 2023-03-15 02:41:18.513717
+[0m02:41:18.514098 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.dim_payment
+[0m02:41:18.514323 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_payment (execute): 2023-03-15 02:41:18.514276 => 2023-03-15 02:41:18.514286
+[0m02:41:18.514971 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.dim_payment
+[0m02:41:18.515291 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.dim_pickup
+[0m02:41:18.515926 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.dim_pickup'
+[0m02:41:18.516202 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.dim_pickup
+[0m02:41:18.521243 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.dim_pickup"
+[0m02:41:18.521893 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_pickup (compile): 2023-03-15 02:41:18.516378 => 2023-03-15 02:41:18.521816
+[0m02:41:18.522187 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.dim_pickup
+[0m02:41:18.522407 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_pickup (execute): 2023-03-15 02:41:18.522360 => 2023-03-15 02:41:18.522370
+[0m02:41:18.523053 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.dim_pickup
+[0m02:41:18.523368 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.dim_taxi_company
+[0m02:41:18.524162 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.dim_taxi_company'
+[0m02:41:18.524467 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.dim_taxi_company
+[0m02:41:18.532372 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.dim_taxi_company"
+[0m02:41:18.534960 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_taxi_company (compile): 2023-03-15 02:41:18.524653 => 2023-03-15 02:41:18.534792
+[0m02:41:18.535583 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.dim_taxi_company
+[0m02:41:18.536003 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.dim_taxi_company (execute): 2023-03-15 02:41:18.535934 => 2023-03-15 02:41:18.535947
+[0m02:41:18.536688 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.dim_taxi_company
+[0m02:41:18.536993 [debug] [Thread-1  ]: Began running node model.dbt_with_bq.fact_taxi_trips
+[0m02:41:18.537596 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_with_bq.fact_taxi_trips'
+[0m02:41:18.537878 [debug] [Thread-1  ]: Began compiling node model.dbt_with_bq.fact_taxi_trips
+[0m02:41:18.550535 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_with_bq.fact_taxi_trips"
+[0m02:41:18.552956 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.fact_taxi_trips (compile): 2023-03-15 02:41:18.538057 => 2023-03-15 02:41:18.552815
+[0m02:41:18.553454 [debug] [Thread-1  ]: Began executing node model.dbt_with_bq.fact_taxi_trips
+[0m02:41:18.553733 [debug] [Thread-1  ]: Timing info for model.dbt_with_bq.fact_taxi_trips (execute): 2023-03-15 02:41:18.553676 => 2023-03-15 02:41:18.553687
+[0m02:41:18.554527 [debug] [Thread-1  ]: Finished running node model.dbt_with_bq.fact_taxi_trips
+[0m02:41:18.554947 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.not_null_my_second_dbt_model_id.151b76d778
+[0m02:41:18.555716 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.not_null_my_second_dbt_model_id.151b76d778'
+[0m02:41:18.556255 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.not_null_my_second_dbt_model_id.151b76d778
+[0m02:41:18.560864 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.not_null_my_second_dbt_model_id.151b76d778"
+[0m02:41:18.561668 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_my_second_dbt_model_id.151b76d778 (compile): 2023-03-15 02:41:18.556480 => 2023-03-15 02:41:18.561585
+[0m02:41:18.561982 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.not_null_my_second_dbt_model_id.151b76d778
+[0m02:41:18.562202 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_my_second_dbt_model_id.151b76d778 (execute): 2023-03-15 02:41:18.562154 => 2023-03-15 02:41:18.562164
+[0m02:41:18.562840 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.not_null_my_second_dbt_model_id.151b76d778
+[0m02:41:18.563151 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.unique_my_second_dbt_model_id.57a0f8c493
+[0m02:41:18.563830 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.unique_my_second_dbt_model_id.57a0f8c493'
+[0m02:41:18.564128 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.unique_my_second_dbt_model_id.57a0f8c493
+[0m02:41:18.568168 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.unique_my_second_dbt_model_id.57a0f8c493"
+[0m02:41:18.568861 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.unique_my_second_dbt_model_id.57a0f8c493 (compile): 2023-03-15 02:41:18.564311 => 2023-03-15 02:41:18.568785
+[0m02:41:18.569163 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.unique_my_second_dbt_model_id.57a0f8c493
+[0m02:41:18.569385 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.unique_my_second_dbt_model_id.57a0f8c493 (execute): 2023-03-15 02:41:18.569337 => 2023-03-15 02:41:18.569347
+[0m02:41:18.569999 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.unique_my_second_dbt_model_id.57a0f8c493
+[0m02:41:18.570321 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.not_null_dim_dropoff_dropoff_community_area.b2abffe736
+[0m02:41:18.570968 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.not_null_dim_dropoff_dropoff_community_area.b2abffe736'
+[0m02:41:18.571241 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.not_null_dim_dropoff_dropoff_community_area.b2abffe736
+[0m02:41:18.575223 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.not_null_dim_dropoff_dropoff_community_area.b2abffe736"
+[0m02:41:18.576031 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_dim_dropoff_dropoff_community_area.b2abffe736 (compile): 2023-03-15 02:41:18.571416 => 2023-03-15 02:41:18.575951
+[0m02:41:18.576356 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.not_null_dim_dropoff_dropoff_community_area.b2abffe736
+[0m02:41:18.576587 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_dim_dropoff_dropoff_community_area.b2abffe736 (execute): 2023-03-15 02:41:18.576538 => 2023-03-15 02:41:18.576548
+[0m02:41:18.577250 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.not_null_dim_dropoff_dropoff_community_area.b2abffe736
+[0m02:41:18.577579 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.not_null_dim_pickup_pickup_census_tract.53c79c91f7
+[0m02:41:18.578230 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.not_null_dim_pickup_pickup_census_tract.53c79c91f7'
+[0m02:41:18.578493 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.not_null_dim_pickup_pickup_census_tract.53c79c91f7
+[0m02:41:18.582816 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.not_null_dim_pickup_pickup_census_tract.53c79c91f7"
+[0m02:41:18.583482 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_dim_pickup_pickup_census_tract.53c79c91f7 (compile): 2023-03-15 02:41:18.578667 => 2023-03-15 02:41:18.583408
+[0m02:41:18.583778 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.not_null_dim_pickup_pickup_census_tract.53c79c91f7
+[0m02:41:18.584015 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_dim_pickup_pickup_census_tract.53c79c91f7 (execute): 2023-03-15 02:41:18.583966 => 2023-03-15 02:41:18.583976
+[0m02:41:18.584648 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.not_null_dim_pickup_pickup_census_tract.53c79c91f7
+[0m02:41:18.584998 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.unique_dim_pickup_pickup_census_tract.ac22527f54
+[0m02:41:18.585611 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.unique_dim_pickup_pickup_census_tract.ac22527f54'
+[0m02:41:18.585897 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.unique_dim_pickup_pickup_census_tract.ac22527f54
+[0m02:41:18.589740 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.unique_dim_pickup_pickup_census_tract.ac22527f54"
+[0m02:41:18.590407 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.unique_dim_pickup_pickup_census_tract.ac22527f54 (compile): 2023-03-15 02:41:18.586075 => 2023-03-15 02:41:18.590335
+[0m02:41:18.590710 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.unique_dim_pickup_pickup_census_tract.ac22527f54
+[0m02:41:18.590929 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.unique_dim_pickup_pickup_census_tract.ac22527f54 (execute): 2023-03-15 02:41:18.590882 => 2023-03-15 02:41:18.590892
+[0m02:41:18.591538 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.unique_dim_pickup_pickup_census_tract.ac22527f54
+[0m02:41:18.591847 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.not_null_fact_taxi_trips_trip_id.0a488b34a6
+[0m02:41:18.592452 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.not_null_fact_taxi_trips_trip_id.0a488b34a6'
+[0m02:41:18.592726 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.not_null_fact_taxi_trips_trip_id.0a488b34a6
+[0m02:41:18.597334 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.not_null_fact_taxi_trips_trip_id.0a488b34a6"
+[0m02:41:18.598074 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_fact_taxi_trips_trip_id.0a488b34a6 (compile): 2023-03-15 02:41:18.592929 => 2023-03-15 02:41:18.597983
+[0m02:41:18.598418 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.not_null_fact_taxi_trips_trip_id.0a488b34a6
+[0m02:41:18.598667 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_fact_taxi_trips_trip_id.0a488b34a6 (execute): 2023-03-15 02:41:18.598612 => 2023-03-15 02:41:18.598622
+[0m02:41:18.599322 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.not_null_fact_taxi_trips_trip_id.0a488b34a6
+[0m02:41:18.599676 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.not_null_fact_taxi_trips_trip_miles.cfc04ee6d8
+[0m02:41:18.600398 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.not_null_fact_taxi_trips_trip_miles.cfc04ee6d8'
+[0m02:41:18.600730 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.not_null_fact_taxi_trips_trip_miles.cfc04ee6d8
+[0m02:41:18.604874 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.not_null_fact_taxi_trips_trip_miles.cfc04ee6d8"
+[0m02:41:18.605546 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_fact_taxi_trips_trip_miles.cfc04ee6d8 (compile): 2023-03-15 02:41:18.600923 => 2023-03-15 02:41:18.605469
+[0m02:41:18.605876 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.not_null_fact_taxi_trips_trip_miles.cfc04ee6d8
+[0m02:41:18.606107 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_fact_taxi_trips_trip_miles.cfc04ee6d8 (execute): 2023-03-15 02:41:18.606057 => 2023-03-15 02:41:18.606067
+[0m02:41:18.607742 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.not_null_fact_taxi_trips_trip_miles.cfc04ee6d8
+[0m02:41:18.609038 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.not_null_fact_taxi_trips_trip_minutes.f25e98d086
+[0m02:41:18.609805 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.not_null_fact_taxi_trips_trip_minutes.f25e98d086'
+[0m02:41:18.610131 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.not_null_fact_taxi_trips_trip_minutes.f25e98d086
+[0m02:41:18.615983 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.not_null_fact_taxi_trips_trip_minutes.f25e98d086"
+[0m02:41:18.616753 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_fact_taxi_trips_trip_minutes.f25e98d086 (compile): 2023-03-15 02:41:18.610341 => 2023-03-15 02:41:18.616662
+[0m02:41:18.617171 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.not_null_fact_taxi_trips_trip_minutes.f25e98d086
+[0m02:41:18.617487 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.not_null_fact_taxi_trips_trip_minutes.f25e98d086 (execute): 2023-03-15 02:41:18.617414 => 2023-03-15 02:41:18.617426
+[0m02:41:18.618321 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.not_null_fact_taxi_trips_trip_minutes.f25e98d086
+[0m02:41:18.618808 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.relationships_fact_taxi_trips_dropoff_census_tract__dropoff_census_tract__ref_dim_dropoff_.88f7ed0430
+[0m02:41:18.619614 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.relationships_fact_taxi_trips_dropoff_census_tract__dropoff_census_tract__ref_dim_dropoff_.88f7ed0430'
+[0m02:41:18.619954 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.relationships_fact_taxi_trips_dropoff_census_tract__dropoff_census_tract__ref_dim_dropoff_.88f7ed0430
+[0m02:41:18.630646 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.relationships_fact_taxi_trips_dropoff_census_tract__dropoff_census_tract__ref_dim_dropoff_.88f7ed0430"
+[0m02:41:18.631397 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.relationships_fact_taxi_trips_dropoff_census_tract__dropoff_census_tract__ref_dim_dropoff_.88f7ed0430 (compile): 2023-03-15 02:41:18.620157 => 2023-03-15 02:41:18.631301
+[0m02:41:18.631836 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.relationships_fact_taxi_trips_dropoff_census_tract__dropoff_census_tract__ref_dim_dropoff_.88f7ed0430
+[0m02:41:18.632134 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.relationships_fact_taxi_trips_dropoff_census_tract__dropoff_census_tract__ref_dim_dropoff_.88f7ed0430 (execute): 2023-03-15 02:41:18.632068 => 2023-03-15 02:41:18.632080
+[0m02:41:18.632875 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.relationships_fact_taxi_trips_dropoff_census_tract__dropoff_census_tract__ref_dim_dropoff_.88f7ed0430
+[0m02:41:18.633278 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.relationships_fact_taxi_trips_payment_id__payment_id__ref_dim_payment_.0ce5c2b12f
+[0m02:41:18.633869 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.relationships_fact_taxi_trips_payment_id__payment_id__ref_dim_payment_.0ce5c2b12f'
+[0m02:41:18.634156 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.relationships_fact_taxi_trips_payment_id__payment_id__ref_dim_payment_.0ce5c2b12f
+[0m02:41:18.641728 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.relationships_fact_taxi_trips_payment_id__payment_id__ref_dim_payment_.0ce5c2b12f"
+[0m02:41:18.642514 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.relationships_fact_taxi_trips_payment_id__payment_id__ref_dim_payment_.0ce5c2b12f (compile): 2023-03-15 02:41:18.634342 => 2023-03-15 02:41:18.642416
+[0m02:41:18.642884 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.relationships_fact_taxi_trips_payment_id__payment_id__ref_dim_payment_.0ce5c2b12f
+[0m02:41:18.643199 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.relationships_fact_taxi_trips_payment_id__payment_id__ref_dim_payment_.0ce5c2b12f (execute): 2023-03-15 02:41:18.643128 => 2023-03-15 02:41:18.643141
+[0m02:41:18.643962 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.relationships_fact_taxi_trips_payment_id__payment_id__ref_dim_payment_.0ce5c2b12f
+[0m02:41:18.644353 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.relationships_fact_taxi_trips_pickup_census_tract__pickup_census_tract__ref_dim_pickup_.45426ec793
+[0m02:41:18.645186 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.relationships_fact_taxi_trips_pickup_census_tract__pickup_census_tract__ref_dim_pickup_.45426ec793'
+[0m02:41:18.645559 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.relationships_fact_taxi_trips_pickup_census_tract__pickup_census_tract__ref_dim_pickup_.45426ec793
+[0m02:41:18.652105 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.relationships_fact_taxi_trips_pickup_census_tract__pickup_census_tract__ref_dim_pickup_.45426ec793"
+[0m02:41:18.652931 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.relationships_fact_taxi_trips_pickup_census_tract__pickup_census_tract__ref_dim_pickup_.45426ec793 (compile): 2023-03-15 02:41:18.645801 => 2023-03-15 02:41:18.652840
+[0m02:41:18.653422 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.relationships_fact_taxi_trips_pickup_census_tract__pickup_census_tract__ref_dim_pickup_.45426ec793
+[0m02:41:18.653752 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.relationships_fact_taxi_trips_pickup_census_tract__pickup_census_tract__ref_dim_pickup_.45426ec793 (execute): 2023-03-15 02:41:18.653680 => 2023-03-15 02:41:18.653692
+[0m02:41:18.654519 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.relationships_fact_taxi_trips_pickup_census_tract__pickup_census_tract__ref_dim_pickup_.45426ec793
+[0m02:41:18.655288 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.relationships_fact_taxi_trips_taxi_id__taxi_id__ref_dim_taxi_company_.5e73c23f65
+[0m02:41:18.655991 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.relationships_fact_taxi_trips_taxi_id__taxi_id__ref_dim_taxi_company_.5e73c23f65'
+[0m02:41:18.656317 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.relationships_fact_taxi_trips_taxi_id__taxi_id__ref_dim_taxi_company_.5e73c23f65
+[0m02:41:18.664810 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.relationships_fact_taxi_trips_taxi_id__taxi_id__ref_dim_taxi_company_.5e73c23f65"
+[0m02:41:18.665555 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.relationships_fact_taxi_trips_taxi_id__taxi_id__ref_dim_taxi_company_.5e73c23f65 (compile): 2023-03-15 02:41:18.656531 => 2023-03-15 02:41:18.665420
+[0m02:41:18.666024 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.relationships_fact_taxi_trips_taxi_id__taxi_id__ref_dim_taxi_company_.5e73c23f65
+[0m02:41:18.666425 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.relationships_fact_taxi_trips_taxi_id__taxi_id__ref_dim_taxi_company_.5e73c23f65 (execute): 2023-03-15 02:41:18.666352 => 2023-03-15 02:41:18.666365
+[0m02:41:18.667388 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.relationships_fact_taxi_trips_taxi_id__taxi_id__ref_dim_taxi_company_.5e73c23f65
+[0m02:41:18.667855 [debug] [Thread-1  ]: Began running node test.dbt_with_bq.unique_fact_taxi_trips_trip_id.9bcb3949ad
+[0m02:41:18.668497 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.dbt_with_bq.unique_fact_taxi_trips_trip_id.9bcb3949ad'
+[0m02:41:18.668847 [debug] [Thread-1  ]: Began compiling node test.dbt_with_bq.unique_fact_taxi_trips_trip_id.9bcb3949ad
+[0m02:41:18.672840 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_with_bq.unique_fact_taxi_trips_trip_id.9bcb3949ad"
+[0m02:41:18.673517 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.unique_fact_taxi_trips_trip_id.9bcb3949ad (compile): 2023-03-15 02:41:18.669045 => 2023-03-15 02:41:18.673436
+[0m02:41:18.673848 [debug] [Thread-1  ]: Began executing node test.dbt_with_bq.unique_fact_taxi_trips_trip_id.9bcb3949ad
+[0m02:41:18.674104 [debug] [Thread-1  ]: Timing info for test.dbt_with_bq.unique_fact_taxi_trips_trip_id.9bcb3949ad (execute): 2023-03-15 02:41:18.674045 => 2023-03-15 02:41:18.674056
+[0m02:41:18.674901 [debug] [Thread-1  ]: Finished running node test.dbt_with_bq.unique_fact_taxi_trips_trip_id.9bcb3949ad
+[0m02:41:18.676187 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:41:18.676545 [debug] [MainThread]: Connection 'test.dbt_with_bq.unique_fact_taxi_trips_trip_id.9bcb3949ad' was properly closed.
+[0m02:41:18.677622 [debug] [MainThread]: Command end result
+[0m02:41:18.688786 [info ] [MainThread]: Done.
+[0m02:41:18.697213 [debug] [MainThread]: Acquiring new bigquery connection 'generate_catalog'
+[0m02:41:18.697602 [info ] [MainThread]: Building catalog
+[0m02:41:18.698747 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:41:19.891727 [debug] [ThreadPool]: Acquiring new bigquery connection 'datafellowship9.information_schema'
+[0m02:41:19.924242 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:41:19.925364 [debug] [ThreadPool]: On datafellowship9.information_schema: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "dbt_with_bq", "target_name": "dev", "connection_name": "datafellowship9.information_schema"} */
+
+    with tables as (
+        select
+            project_id as table_database,
+            dataset_id as table_schema,
+            table_id as original_table_name,
+
+            concat(project_id, '.', dataset_id, '.', table_id) as relation_id,
+
+            row_count,
+            size_bytes as size_bytes,
+            case
+                when type = 1 then 'table'
+                when type = 2 then 'view'
+                else 'external'
+            end as table_type,
+
+            REGEXP_CONTAINS(table_id, '^.+[0-9]{8}$') and coalesce(type, 0) = 1 as is_date_shard,
+            REGEXP_EXTRACT(table_id, '^(.+)[0-9]{8}$') as shard_base_name,
+            REGEXP_EXTRACT(table_id, '^.+([0-9]{8})$') as shard_name
+
+        from `datafellowship9`.`dbt_taxi_trips`.__TABLES__
+        where (upper(dataset_id) = upper('dbt_taxi_trips'))
+    ),
+
+    table_options as (
+        select
+            concat(table_catalog, '.', table_schema, '.', table_name) as relation_id,
+            JSON_VALUE(option_value) as table_comment
+
+        from `datafellowship9`.`dbt_taxi_trips`.INFORMATION_SCHEMA.TABLE_OPTIONS
+        where option_name = 'description'
+    ),
+    extracted as (
+
+        select *,
+            case
+                when is_date_shard then shard_base_name
+                else original_table_name
+            end as table_name
+
+        from tables
+
+    ),
+
+    unsharded_tables as (
+
+        select
+            table_database,
+            table_schema,
+            table_name,
+            coalesce(table_type, 'external') as table_type,
+            is_date_shard,
+
+            struct(
+                min(shard_name) as shard_min,
+                max(shard_name) as shard_max,
+                count(*) as shard_count
+            ) as table_shards,
+
+            sum(size_bytes) as size_bytes,
+            sum(row_count) as row_count,
+
+            max(relation_id) as relation_id
+
+        from extracted
+        group by 1,2,3,4,5
+
+    ),
+
+    info_schema_columns as (
+
+        select
+            concat(table_catalog, '.', table_schema, '.', table_name) as relation_id,
+            table_catalog as table_database,
+            table_schema,
+            table_name,
+
+            -- use the "real" column name from the paths query below
+            column_name as base_column_name,
+            ordinal_position as column_index,
+
+            is_partitioning_column,
+            clustering_ordinal_position
+
+        from `datafellowship9`.`dbt_taxi_trips`.INFORMATION_SCHEMA.COLUMNS
+        where ordinal_position is not null
+
+    ),
+
+    info_schema_column_paths as (
+
+        select
+            concat(table_catalog, '.', table_schema, '.', table_name) as relation_id,
+            field_path as column_name,
+            data_type as column_type,
+            column_name as base_column_name,
+            description as column_comment
+
+        from `datafellowship9`.`dbt_taxi_trips`.INFORMATION_SCHEMA.COLUMN_FIELD_PATHS
+
+    ),
+
+    columns as (
+
+        select * except (base_column_name)
+        from info_schema_columns
+        join info_schema_column_paths using (relation_id, base_column_name)
+
+    ),
+
+    column_stats as (
+
+        select
+            table_database,
+            table_schema,
+            table_name,
+            max(relation_id) as relation_id,
+            max(case when is_partitioning_column = 'YES' then 1 else 0 end) = 1 as is_partitioned,
+            max(case when is_partitioning_column = 'YES' then column_name else null end) as partition_column,
+            max(case when clustering_ordinal_position is not null then 1 else 0 end) = 1 as is_clustered,
+            array_to_string(
+                array_agg(
+                    case
+                        when clustering_ordinal_position is not null then column_name
+                        else null
+                    end ignore nulls
+                    order by clustering_ordinal_position
+                ), ', '
+            ) as clustering_columns
+
+        from columns
+        group by 1,2,3
+
+    )
+
+    select
+        unsharded_tables.table_database,
+        unsharded_tables.table_schema,
+        case
+            when is_date_shard then concat(unsharded_tables.table_name, '*')
+            else unsharded_tables.table_name
+        end as table_name,
+        unsharded_tables.table_type,
+        table_options.table_comment,
+
+        -- coalesce name and type for External tables - these columns are not
+        -- present in the COLUMN_FIELD_PATHS resultset
+        coalesce(columns.column_name, '<unknown>') as column_name,
+        -- invent a row number to account for nested fields -- BQ does
+        -- not treat these nested properties as independent fields
+        row_number() over (
+            partition by relation_id
+            order by columns.column_index, columns.column_name
+        ) as column_index,
+        coalesce(columns.column_type, '<unknown>') as column_type,
+        columns.column_comment,
+
+        'Shard count' as `stats__date_shards__label`,
+        table_shards.shard_count as `stats__date_shards__value`,
+        'The number of date shards in this table' as `stats__date_shards__description`,
+        is_date_shard as `stats__date_shards__include`,
+
+        'Shard (min)' as `stats__date_shard_min__label`,
+        table_shards.shard_min as `stats__date_shard_min__value`,
+        'The first date shard in this table' as `stats__date_shard_min__description`,
+        is_date_shard as `stats__date_shard_min__include`,
+
+        'Shard (max)' as `stats__date_shard_max__label`,
+        table_shards.shard_max as `stats__date_shard_max__value`,
+        'The last date shard in this table' as `stats__date_shard_max__description`,
+        is_date_shard as `stats__date_shard_max__include`,
+
+        '# Rows' as `stats__num_rows__label`,
+        row_count as `stats__num_rows__value`,
+        'Approximate count of rows in this table' as `stats__num_rows__description`,
+        (unsharded_tables.table_type = 'table') as `stats__num_rows__include`,
+
+        'Approximate Size' as `stats__num_bytes__label`,
+        size_bytes as `stats__num_bytes__value`,
+        'Approximate size of table as reported by BigQuery' as `stats__num_bytes__description`,
+        (unsharded_tables.table_type = 'table') as `stats__num_bytes__include`,
+
+        'Partitioned By' as `stats__partitioning_type__label`,
+        partition_column as `stats__partitioning_type__value`,
+        'The partitioning column for this table' as `stats__partitioning_type__description`,
+        is_partitioned as `stats__partitioning_type__include`,
+
+        'Clustered By' as `stats__clustering_fields__label`,
+        clustering_columns as `stats__clustering_fields__value`,
+        'The clustering columns for this table' as `stats__clustering_fields__description`,
+        is_clustered as `stats__clustering_fields__include`
+
+    -- join using relation_id (an actual relation, not a shard prefix) to make
+    -- sure that column metadata is picked up through the join. This will only
+    -- return the column information for the "max" table in a date-sharded table set
+    from unsharded_tables
+    left join table_options using (relation_id)
+    left join columns using (relation_id)
+    left join column_stats using (relation_id)
+  
+[0m02:41:23.600112 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datafellowship9&j=bq:US:dff14d81-86e5-4572-92bb-74540f9b3ee7&page=queryresults
+[0m02:41:23.638712 [debug] [ThreadPool]: Acquiring new bigquery connection 'bigquery-public-data.information_schema'
+[0m02:41:23.642884 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:41:23.643524 [debug] [ThreadPool]: On bigquery-public-data.information_schema: /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "dbt_with_bq", "target_name": "dev", "connection_name": "bigquery-public-data.information_schema"} */
+
+    with tables as (
+        select
+            project_id as table_database,
+            dataset_id as table_schema,
+            table_id as original_table_name,
+
+            concat(project_id, '.', dataset_id, '.', table_id) as relation_id,
+
+            row_count,
+            size_bytes as size_bytes,
+            case
+                when type = 1 then 'table'
+                when type = 2 then 'view'
+                else 'external'
+            end as table_type,
+
+            REGEXP_CONTAINS(table_id, '^.+[0-9]{8}$') and coalesce(type, 0) = 1 as is_date_shard,
+            REGEXP_EXTRACT(table_id, '^(.+)[0-9]{8}$') as shard_base_name,
+            REGEXP_EXTRACT(table_id, '^.+([0-9]{8})$') as shard_name
+
+        from `bigquery-public-data`.`chicago_taxi_trips`.__TABLES__
+        where (upper(dataset_id) = upper('chicago_taxi_trips'))
+    ),
+
+    table_options as (
+        select
+            concat(table_catalog, '.', table_schema, '.', table_name) as relation_id,
+            JSON_VALUE(option_value) as table_comment
+
+        from `bigquery-public-data`.`chicago_taxi_trips`.INFORMATION_SCHEMA.TABLE_OPTIONS
+        where option_name = 'description'
+    ),
+    extracted as (
+
+        select *,
+            case
+                when is_date_shard then shard_base_name
+                else original_table_name
+            end as table_name
+
+        from tables
+
+    ),
+
+    unsharded_tables as (
+
+        select
+            table_database,
+            table_schema,
+            table_name,
+            coalesce(table_type, 'external') as table_type,
+            is_date_shard,
+
+            struct(
+                min(shard_name) as shard_min,
+                max(shard_name) as shard_max,
+                count(*) as shard_count
+            ) as table_shards,
+
+            sum(size_bytes) as size_bytes,
+            sum(row_count) as row_count,
+
+            max(relation_id) as relation_id
+
+        from extracted
+        group by 1,2,3,4,5
+
+    ),
+
+    info_schema_columns as (
+
+        select
+            concat(table_catalog, '.', table_schema, '.', table_name) as relation_id,
+            table_catalog as table_database,
+            table_schema,
+            table_name,
+
+            -- use the "real" column name from the paths query below
+            column_name as base_column_name,
+            ordinal_position as column_index,
+
+            is_partitioning_column,
+            clustering_ordinal_position
+
+        from `bigquery-public-data`.`chicago_taxi_trips`.INFORMATION_SCHEMA.COLUMNS
+        where ordinal_position is not null
+
+    ),
+
+    info_schema_column_paths as (
+
+        select
+            concat(table_catalog, '.', table_schema, '.', table_name) as relation_id,
+            field_path as column_name,
+            data_type as column_type,
+            column_name as base_column_name,
+            description as column_comment
+
+        from `bigquery-public-data`.`chicago_taxi_trips`.INFORMATION_SCHEMA.COLUMN_FIELD_PATHS
+
+    ),
+
+    columns as (
+
+        select * except (base_column_name)
+        from info_schema_columns
+        join info_schema_column_paths using (relation_id, base_column_name)
+
+    ),
+
+    column_stats as (
+
+        select
+            table_database,
+            table_schema,
+            table_name,
+            max(relation_id) as relation_id,
+            max(case when is_partitioning_column = 'YES' then 1 else 0 end) = 1 as is_partitioned,
+            max(case when is_partitioning_column = 'YES' then column_name else null end) as partition_column,
+            max(case when clustering_ordinal_position is not null then 1 else 0 end) = 1 as is_clustered,
+            array_to_string(
+                array_agg(
+                    case
+                        when clustering_ordinal_position is not null then column_name
+                        else null
+                    end ignore nulls
+                    order by clustering_ordinal_position
+                ), ', '
+            ) as clustering_columns
+
+        from columns
+        group by 1,2,3
+
+    )
+
+    select
+        unsharded_tables.table_database,
+        unsharded_tables.table_schema,
+        case
+            when is_date_shard then concat(unsharded_tables.table_name, '*')
+            else unsharded_tables.table_name
+        end as table_name,
+        unsharded_tables.table_type,
+        table_options.table_comment,
+
+        -- coalesce name and type for External tables - these columns are not
+        -- present in the COLUMN_FIELD_PATHS resultset
+        coalesce(columns.column_name, '<unknown>') as column_name,
+        -- invent a row number to account for nested fields -- BQ does
+        -- not treat these nested properties as independent fields
+        row_number() over (
+            partition by relation_id
+            order by columns.column_index, columns.column_name
+        ) as column_index,
+        coalesce(columns.column_type, '<unknown>') as column_type,
+        columns.column_comment,
+
+        'Shard count' as `stats__date_shards__label`,
+        table_shards.shard_count as `stats__date_shards__value`,
+        'The number of date shards in this table' as `stats__date_shards__description`,
+        is_date_shard as `stats__date_shards__include`,
+
+        'Shard (min)' as `stats__date_shard_min__label`,
+        table_shards.shard_min as `stats__date_shard_min__value`,
+        'The first date shard in this table' as `stats__date_shard_min__description`,
+        is_date_shard as `stats__date_shard_min__include`,
+
+        'Shard (max)' as `stats__date_shard_max__label`,
+        table_shards.shard_max as `stats__date_shard_max__value`,
+        'The last date shard in this table' as `stats__date_shard_max__description`,
+        is_date_shard as `stats__date_shard_max__include`,
+
+        '# Rows' as `stats__num_rows__label`,
+        row_count as `stats__num_rows__value`,
+        'Approximate count of rows in this table' as `stats__num_rows__description`,
+        (unsharded_tables.table_type = 'table') as `stats__num_rows__include`,
+
+        'Approximate Size' as `stats__num_bytes__label`,
+        size_bytes as `stats__num_bytes__value`,
+        'Approximate size of table as reported by BigQuery' as `stats__num_bytes__description`,
+        (unsharded_tables.table_type = 'table') as `stats__num_bytes__include`,
+
+        'Partitioned By' as `stats__partitioning_type__label`,
+        partition_column as `stats__partitioning_type__value`,
+        'The partitioning column for this table' as `stats__partitioning_type__description`,
+        is_partitioned as `stats__partitioning_type__include`,
+
+        'Clustered By' as `stats__clustering_fields__label`,
+        clustering_columns as `stats__clustering_fields__value`,
+        'The clustering columns for this table' as `stats__clustering_fields__description`,
+        is_clustered as `stats__clustering_fields__include`
+
+    -- join using relation_id (an actual relation, not a shard prefix) to make
+    -- sure that column metadata is picked up through the join. This will only
+    -- return the column information for the "max" table in a date-sharded table set
+    from unsharded_tables
+    left join table_options using (relation_id)
+    left join columns using (relation_id)
+    left join column_stats using (relation_id)
+  
+[0m02:41:27.412887 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datafellowship9&j=bq:US:bdef4d3e-3c1c-40dc-866b-f939c8bacf3e&page=queryresults
+[0m02:41:27.463878 [info ] [MainThread]: Catalog written to /Users/user/Documents/DE IYKRA/5. Analytics Engineering/Homework_dbt/dbt_with_bq/target/catalog.json
+[0m02:41:27.464911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cdc8100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d0f2970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d0f26d0>]}
+[0m02:41:27.465557 [debug] [MainThread]: Flushing usage events
+[0m02:41:28.819072 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m02:41:28.820379 [debug] [MainThread]: Connection 'bigquery-public-data.information_schema' was properly closed.
+
+
+============================== 2023-03-15 02:42:30.829717 | fdf14d47-bb70-415b-b096-5bced5765b15 ==============================
+[0m02:42:30.829717 [info ] [MainThread]: Running with dbt=1.4.4
+[0m02:42:30.833542 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/user/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'port': 8080, 'open_browser': True, 'which': 'serve', 'indirect_selection': 'eager'}
+[0m02:42:30.833952 [debug] [MainThread]: Tracking: tracking
+[0m02:42:30.885920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e8e7100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e8e7d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e8e7790>]}
+[0m02:42:30.892623 [info ] [MainThread]: Serving docs at 0.0.0.0:8080
+[0m02:42:30.893171 [info ] [MainThread]: To access from your browser, navigate to:  http://localhost:8080
+[0m02:42:30.893509 [info ] [MainThread]: 
+[0m02:42:30.893832 [info ] [MainThread]: 
+[0m02:42:30.894098 [info ] [MainThread]: Press Ctrl+C to exit.

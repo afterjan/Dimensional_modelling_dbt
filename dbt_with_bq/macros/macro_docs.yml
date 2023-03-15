@@ -1,0 +1,8 @@
+version: 2
+
+macros:
+  - name: encode_payment
+    arguments:
+      - name: payment_type
+        type: column name
+        description: "The name of the payment_type column, which contains id 1-10"
