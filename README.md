@@ -35,6 +35,6 @@ Taxi trip data can be accessed on the bigquery-public-data database and the chic
    (Notes: i get some error when perform 'dbt run' because there are some typo in my model, so make sure there is no typo in model or test)
    when dbt-run is successful it will be like this in terminal:
 8. Check if a new data ware house has been created in BigQuery
-9. Run dbt docs generate
-10. Run dbt docs serve
+9. Run `dbt docs generate`
+10. Run `dbt docs serve`
     
